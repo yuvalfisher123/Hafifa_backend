@@ -2,9 +2,9 @@
 
 export class Event {
     id: string;
-    lut: BigInt;
+    lut: bigint;
     name: string;
-    longitude: Number;
-    latitude: Number;
+    longitude: number;
+    latitude: number;
     description: string
 }
