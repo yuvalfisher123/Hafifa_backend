@@ -1,7 +1,9 @@
-import { Body, Controller, Get, Param, ParseIntPipe } from '@nestjs/common';
+import { Body, Controller, Get, Param, ParseIntPipe, UseFilters } from '@nestjs/common';
 import { EventService } from './event.service';
+import { HttpExceptionFilter } from 'src/error/httpExeption.filter';
 
 @Controller()
+@UseFilters(HttpExceptionFilter)
 export class EventController {
   constructor(private readonly eventService: EventService) {}
 
